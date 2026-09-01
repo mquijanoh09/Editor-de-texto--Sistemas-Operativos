@@ -1,0 +1,11 @@
+# Artefactos de compilación
+*.o
+eafitOS
+
+# Basura de Windows (marcas de "archivo descargado de internet")
+*Zone.Identifier
+*:Zone.Identifier
+
+# Configuración local de IDEs
+.idea/
+.vscode/
