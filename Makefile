@@ -11,7 +11,7 @@ CFLAGS  = -Wall -Wextra -std=gnu99 -g -D_GNU_SOURCE
 TARGET  = eafitOS
 
 # Módulos del proyecto. cat_editor.c es el que implementa el editor interactivo.
-SRCS = main.c cat_datos.c cat_memoria.c cat_monitoreo.c cat_util.c cat_listado.c cat_editor.c
+SRCS = main.c cat_datos.c cat_memoria.c cat_monitoreo.c cat_util.c cat_listado.c cat_editor.c buffer.c
 OBJS = $(SRCS:.c=.o)
 
 all: $(TARGET)
@@ -20,7 +20,7 @@ $(TARGET): $(OBJS)
 	$(CC) $(CFLAGS) -o $(TARGET) $(OBJS)
 
 # Cada .o depende de shell.h: si cambia la cabecera, se recompila todo.
-%.o: %.c shell.h
+%.o: %.c shell.h buffer.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 # Antes 'all' ejecutaba el binario automáticamente, lo que rompía 'make' en

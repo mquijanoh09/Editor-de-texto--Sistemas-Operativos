@@ -142,8 +142,8 @@ Command commands[] = {
     {
         "editor", "editor",
         "editor",
-        "Abre una sesión interactiva de edición de texto (comandos: o, p, a, d, q).",
-        "open(2), read(2), write(2), lseek(2), ftruncate(2), close(2)",
+        "Abre una sesión interactiva de edición de texto (comandos: o, p, a, d, w, q).",
+        "open(2), read(2), write(2), lseek(2), ftruncate(2), fsync(2), rename(2), close(2)",
         cmd_editor
     },
 };

@@ -12,7 +12,7 @@
  * COMANDO: d_create <archivo> <texto>
  * ====================================================================================
  * Demuestra la creación de archivos a bajo nivel mediante llamadas al sistema.
- * 
+ *
  * Syscalls explicadas:
  * 1. open(2): Solicita al kernel abrir o crear un archivo.
  *    - O_WRONLY: Abre el archivo solo para escritura.
@@ -131,7 +131,7 @@ int cmd_d_append(int argc, char **argv) { //declaramos la creación de la funci�
  * COMANDO: d_read <archivo>
  * ====================================================================================
  * Demuestra la lectura de archivos utilizando descriptores de archivo del sistema.
- * 
+ *
  * Syscalls explicadas:
  * 1. open(2): Abre un archivo existente.
  *    - O_RDONLY: Abre el archivo en modo de solo lectura.
@@ -188,7 +188,7 @@ int cmd_d_read(int argc, char **argv) {
  * COMANDO: d_info <archivo>
  * ====================================================================================
  * Muestra información estructural del inodo de un archivo.
- * 
+ *
  * Syscalls explicadas:
  * 1. stat(2): Obtiene estadísticas de metadatos de un archivo sin necesidad de abrirlo.
  *    - Llena la estructura struct stat con metadatos del inodo del archivo en el sistema de ficheros.
@@ -240,9 +240,9 @@ int cmd_d_info(int argc, char **argv) {
  * COMANDO: d_copy <origen> <destino>
  * ====================================================================================
  * Demuestra la copia progresiva de datos a nivel de bytes mediante búferes.
- * 
+ *
  * Este comando abre el archivo de origen en modo lectura (O_RDONLY), el archivo destino
- * en modo escritura (O_WRONLY | O_CREAT | O_TRUNC), y transfiere los bloques leyéndolos 
+ * en modo escritura (O_WRONLY | O_CREAT | O_TRUNC), y transfiere los bloques leyéndolos
  * en memoria intermedia RAM e inmediatamente escribiéndolos en el destino.
  */
 int cmd_d_copy(int argc, char **argv) {
